@@ -43,7 +43,7 @@ def make_data_lists(text):
 
 def create_defaultdict(data_list):
     data_dict = defaultdict(list)
-    for d in data_list[1:]:
+    for d in data_list:
         if d[2] != '':
             key = ' '.join(d[:3])
             data = d[3:]
@@ -56,7 +56,6 @@ def unite_doubles(defdict):
             zipped_info = zip(info[0], info[1])
             list_info = list(zipped_info)
             formatted_list = []
-            # print(list_info)
             for t in list_info:
                 l = list(t)
                 if '' in l:
